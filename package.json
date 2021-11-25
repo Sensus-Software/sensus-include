@@ -1,0 +1,18 @@
+{
+  "name": "sensus-include",
+  "version": "1.0.0",
+  "description": "Include Sensus BPM Online flows into your own web application",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "bundle": "browserify -p tinyify build/index.js --outfile dist/sensus-include.js --standalone sensus",
+    "build": "npm run compile && npm run bundle"
+  },
+  "author": "Arjan van Wieringen (a.vanwieringen@sensus-processmanagement.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "tinyify": "^3.0.0",
+    "typescript": "^4.5.2"
+  }
+}

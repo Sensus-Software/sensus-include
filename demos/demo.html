@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../dist/sensus-include.js"></script>
+    <title>DEMO</title>
+</head>
+
+<body>
+    <div id="target"></div>
+    <script>
+        const serverSettings = {
+            "apiEndpoint": "ENTER ENDPOINT HERE",
+            "jwt": "ENTER JWT HERE"
+        }
+        const projectVersionSettings = {
+            "licenseGuid": "7466b45d-feb8-4af8-a14a-d60828a94d39",
+            "projectGuid": "ad9fd6c3-5fe6-494e-bafa-93b9d1e7b635",
+            "projectVersionGuid": "1ee12799-8ebe-467f-a6bb-048c0b84b3a1"
+        };
+
+        const flowRequestSettings = {
+            "processGuid": "60e02467-7f56-4606-9bea-52ab7ecb3db0"
+        }
+
+        const target = document.getElementById("target");
+
+        const s = new sensus.Sensus(serverSettings);
+        s.flow(projectVersionSettings, flowRequestSettings, target);
+    </script>
+</body>
+
+</html>
